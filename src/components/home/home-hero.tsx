@@ -18,8 +18,8 @@ export function HomeHero() {
         <div
           className="absolute inset-0 bg-cover bg-no-repeat opacity-[0.50] sm:opacity-[0.55]"
           style={{
-            backgroundImage: "url(/images/aion2-hero-banner.png)",
-            backgroundPosition: "center 40%",
+            backgroundImage: "url(/images/aion2-hero-banner.png?v=hall-nologo)",
+            backgroundPosition: "center 42%",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-night-deep/82 via-night/65 to-night-deep/88" />
