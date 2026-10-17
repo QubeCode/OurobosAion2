@@ -8,6 +8,7 @@ Place ici les visuels du site (hero, ornements, etc.).
 
 Fichiers :
 
+- `aion2-hero-banner.png` — fond hero landing (faible opacité)
 - `aion2-abysses-banner.webp` — bandeau Abysses (landing, faible opacité)
 - `hero-placeholder.svg` — fond céleste abstrait (placeholder)
 - `ouroboros-mark.svg` — marque serpent stylisée (placeholder)
