@@ -160,6 +160,7 @@ export function RegistrationForm() {
             <Button
               type="button"
               variant="outline"
+              nativeButton={false}
               className="gap-2"
               render={
                 <a

@@ -99,7 +99,11 @@ export function MemberDirectory() {
             Aucun profil ne correspond à ces filtres pour le moment. Sois le/la
             premier·ère à t’inscrire — Ouroboros ne laisse personne derrière.
           </p>
-          <Button render={<a href="/inscription" />} className="mt-6">
+          <Button
+            nativeButton={false}
+            render={<a href="/inscription" />}
+            className="mt-6"
+          >
             S’inscrire
           </Button>
         </div>

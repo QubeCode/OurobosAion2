@@ -99,11 +99,16 @@ export default function HomePage() {
             événements de guilde, au minimum pour écouter les calls.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Button render={<Link href="/inscription" />} className="glow-gold">
+            <Button
+              nativeButton={false}
+              render={<Link href="/inscription" />}
+              className="glow-gold"
+            >
               Rejoindre la guilde
             </Button>
             <Button
               variant="outline"
+              nativeButton={false}
               render={
                 <a
                   href={settings.discordInviteUrl}
@@ -133,7 +138,11 @@ export default function HomePage() {
         <div className="mx-auto max-w-4xl px-4 sm:px-6">
           <AbyssCountdown />
           <div className="mt-8 text-center">
-            <Button variant="outline" render={<Link href="/abysses" />}>
+            <Button
+              variant="outline"
+              nativeButton={false}
+              render={<Link href="/abysses" />}
+            >
               Voir le timer Abysses
             </Button>
           </div>

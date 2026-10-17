@@ -29,10 +29,18 @@ export default function AbyssesPage() {
       </div>
 
       <div className="mt-8 flex flex-wrap justify-center gap-3">
-        <Button variant="outline" render={<Link href="/evenements" />}>
+        <Button
+          variant="outline"
+          nativeButton={false}
+          render={<Link href="/evenements" />}
+        >
           Voir les événements
         </Button>
-        <Button variant="ghost" render={<Link href="/admin" />}>
+        <Button
+          variant="ghost"
+          nativeButton={false}
+          render={<Link href="/admin" />}
+        >
           Configurer (admin)
         </Button>
       </div>

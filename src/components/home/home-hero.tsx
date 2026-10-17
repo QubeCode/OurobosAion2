@@ -39,6 +39,7 @@ export function HomeHero() {
         <div className="anim-fade-rise-delay-2 mt-10 flex flex-col gap-3 sm:flex-row sm:justify-center">
           <Button
             size="lg"
+            nativeButton={false}
             className="glow-gold min-w-[12rem] bg-gold text-gold-foreground hover:bg-gold/90"
             render={<Link href="/inscription" />}
           >
@@ -47,6 +48,7 @@ export function HomeHero() {
           <Button
             size="lg"
             variant="outline"
+            nativeButton={false}
             className="glow-cyan min-w-[12rem] border-cyan-glow/50 text-cyan-glow hover:bg-cyan-glow/10"
             render={
               <a

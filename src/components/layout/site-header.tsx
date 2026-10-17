@@ -51,6 +51,7 @@ export function SiteHeader() {
             );
           })}
           <Button
+            nativeButton={false}
             render={<Link href="/inscription" />}
             className="ml-2 bg-gold text-gold-foreground hover:bg-gold/90"
             size="sm"
