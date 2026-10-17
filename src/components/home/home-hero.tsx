@@ -16,15 +16,15 @@ export function HomeHero() {
         aria-hidden
       >
         <div
-          className="absolute inset-0 bg-cover bg-no-repeat opacity-[0.38] sm:opacity-[0.42]"
+          className="absolute inset-0 bg-cover bg-no-repeat opacity-[0.50] sm:opacity-[0.55]"
           style={{
             backgroundImage: "url(/images/aion2-hero-banner.png)",
             backgroundPosition: "center 40%",
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-night-deep/88 via-night/75 to-night-deep/92" />
-        <div className="absolute inset-0 bg-gradient-to-r from-night-deep/45 via-transparent to-night-deep/45" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(13,32,58,0.35)_0%,transparent_70%)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-night-deep/82 via-night/65 to-night-deep/88" />
+        <div className="absolute inset-0 bg-gradient-to-r from-night-deep/40 via-transparent to-night-deep/40" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(13,32,58,0.28)_0%,transparent_70%)]" />
         <div className="anim-twinkle absolute left-[12%] top-[22%] size-1 rounded-full bg-cyan-glow" />
         <div className="anim-twinkle absolute right-[18%] top-[30%] size-1.5 rounded-full bg-gold [animation-delay:1s]" />
         <div className="anim-twinkle absolute left-[40%] top-[18%] size-1 rounded-full bg-foreground/70 [animation-delay:2s]" />
