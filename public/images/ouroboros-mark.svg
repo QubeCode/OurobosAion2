@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-label="Marque Ouroboros placeholder">
+  <circle cx="64" cy="64" r="40" fill="none" stroke="#d4a84b" stroke-width="3" stroke-dasharray="90 18"/>
+  <circle cx="64" cy="64" r="28" fill="none" stroke="#5ee7df" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="64" cy="24" r="5" fill="#d4a84b"/>
+</svg>
