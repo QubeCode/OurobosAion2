@@ -138,20 +138,20 @@ export default function HomePage() {
         aria-label="Timer Abysses"
         className="relative isolate overflow-hidden border-t border-border/40"
       >
-        {/* Full-bleed bandeau — local artwork, low opacity */}
+        {/* Full-bleed bandeau — local artwork, low opacity + readability veil */}
         <div
           className="pointer-events-none absolute inset-0 -z-10"
           aria-hidden
         >
           <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.28] sm:opacity-[0.32]"
+            className="absolute inset-0 bg-cover bg-no-repeat opacity-40 sm:opacity-45"
             style={{
               backgroundImage: "url(/images/aion2-abysses-banner.webp)",
-              backgroundPosition: "center 35%",
+              backgroundPosition: "center 38%",
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-night-deep/92 via-night/80 to-night-deep/95" />
-          <div className="absolute inset-0 bg-gradient-to-r from-night-deep/50 via-transparent to-night-deep/50" />
+          <div className="absolute inset-0 bg-gradient-to-b from-night-deep/85 via-night/70 to-night-deep/90" />
+          <div className="absolute inset-0 bg-gradient-to-r from-night-deep/55 via-transparent to-night-deep/55" />
         </div>
 
         <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20">
