@@ -195,7 +195,7 @@ export function GuildStoreProvider({ children }: { children: ReactNode }) {
   const clearRegistrations = useCallback(() => {
     patch((prev) => ({
       ...prev,
-      members: prev.members.filter((m) => m.isDemo),
+      members: [],
       rsvps: [],
     }));
   }, [patch]);

@@ -1,6 +1,6 @@
 # Ouroboros — Site guilde AION 2
 
-Site francophone de la guilde **Ouroboros** (AION 2) : accueil, inscription, calendrier d’événements, timer Abysses, liste des membres et admin locale.
+Site francophone de la guilde **Ouroboros** (AION 2) : accueil, inscription, calendrier d’événements, timer Abysses et admin locale.
 
 Stack : **Next.js** · **TypeScript** · **Tailwind CSS** · **shadcn/ui**
 
@@ -33,7 +33,7 @@ Modifiables aussi via **Admin** (`/admin`) — stockés dans `localStorage` (cl�
 
 | Clé / champ | Rôle |
 | --- | --- |
-| `discordInviteUrl` | Invitation Discord (tous les CTAs) |
+| `discordInviteUrl` | Invitation Discord (défaut `https://discord.gg/2tkzumnv3`) |
 | `timezone` | Fuseau (défaut `Europe/Paris`) |
 | `minGs` | GS minimum (1400) |
 | `calendar.referenceLocal` | Point de départ récurrence |
@@ -42,7 +42,7 @@ Modifiables aussi via **Admin** (`/admin`) — stockés dans `localStorage` (cl�
 
 ## Données démo
 
-Inscriptions, RSVP et événements spéciaux sont **locaux au navigateur** — pas de sync multi-appareils sans base de données. Les profils / événements marqués « Démo » sont fictifs.
+Inscriptions, RSVP et événements spéciaux sont **locaux au navigateur** — pas de sync multi-appareils sans base de données. Les candidatures restent privées (pas d’annuaire public).
 
 Le code est structuré pour brancher plus tard Supabase/Firebase via `src/lib/storage.ts` (`GuildDataAdapter`).
 
@@ -56,5 +56,4 @@ Placeholders dans `public/images/` — remplacer localement, sans assets officie
 - `/inscription` — Candidature
 - `/evenements` — Calendrier + RSVP + CRUD spéciaux
 - `/abysses` — Compte à rebours
-- `/membres` — Annuaire filtré
 - `/admin` — Réglages (lien non listé ≠ authentification)

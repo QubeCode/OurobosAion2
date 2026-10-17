@@ -272,11 +272,11 @@ export function AdminPanel() {
       </form>
 
       <div className="space-y-3 rounded-xl border border-destructive/30 bg-card/40 p-4">
-        <h2 className="font-display text-lg text-foreground">Données démo</h2>
+        <h2 className="font-display text-lg text-foreground">Données locales</h2>
         <p className="text-sm text-muted-foreground">
-          Les profils et événements marqués « Démo » sont fictifs. Réinitialiser
-          recharge les données d’exemple ; effacer les inscriptions retire
-          uniquement les candidatures non-démo.
+          Les événements marqués « Démo » sont fictifs. Réinitialiser recharge
+          les exemples et les réglages par défaut ; effacer les inscriptions
+          retire les candidatures et RSVP stockés dans ce navigateur.
         </p>
         <div className="flex flex-wrap gap-2">
           <Button type="button" variant="outline" onClick={resetDemoData}>

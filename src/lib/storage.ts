@@ -1,5 +1,5 @@
 import { DEFAULT_SITE_SETTINGS, SITE_META } from "@/lib/config";
-import { DEMO_MEMBERS, DEMO_SPECIAL_EVENTS } from "@/lib/demo-data";
+import { DEMO_SPECIAL_EVENTS } from "@/lib/demo-data";
 import type {
   GuildEvent,
   MemberProfile,
@@ -10,10 +10,11 @@ import type {
 export interface PersistedGuildData {
   version: 1;
   settings: SiteSettings;
+  /** Inscriptions locales (non exposées publiquement) */
   members: MemberProfile[];
   specialEvents: GuildEvent[];
   rsvps: RsvpRecord[];
-  /** When true, demo seed members/events were loaded once */
+  /** When true, demo seed events were loaded once */
   seededDemo: boolean;
 }
 
@@ -21,7 +22,7 @@ export function createDefaultPersistedData(): PersistedGuildData {
   return {
     version: 1,
     settings: structuredClone(DEFAULT_SITE_SETTINGS),
-    members: structuredClone(DEMO_MEMBERS),
+    members: [],
     specialEvents: structuredClone(DEMO_SPECIAL_EVENTS),
     rsvps: [],
     seededDemo: true,
@@ -42,17 +43,25 @@ export function loadPersistedData(): PersistedGuildData {
     }
 
     const parsed = JSON.parse(raw) as Partial<PersistedGuildData>;
+    const mergedSettings: SiteSettings = {
+      ...DEFAULT_SITE_SETTINGS,
+      ...parsed.settings,
+      calendar: {
+        ...DEFAULT_SITE_SETTINGS.calendar,
+        ...parsed.settings?.calendar,
+      },
+    };
+    // Migrate placeholder invite to the permanent guild link
+    if (
+      !mergedSettings.discordInviteUrl ||
+      mergedSettings.discordInviteUrl.includes("REPLACE_ME")
+    ) {
+      mergedSettings.discordInviteUrl = DEFAULT_SITE_SETTINGS.discordInviteUrl;
+    }
     return {
       version: 1,
-      settings: {
-        ...DEFAULT_SITE_SETTINGS,
-        ...parsed.settings,
-        calendar: {
-          ...DEFAULT_SITE_SETTINGS.calendar,
-          ...parsed.settings?.calendar,
-        },
-      },
-      members: Array.isArray(parsed.members) ? parsed.members : DEMO_MEMBERS,
+      settings: mergedSettings,
+      members: Array.isArray(parsed.members) ? parsed.members : [],
       specialEvents: Array.isArray(parsed.specialEvents)
         ? parsed.specialEvents
         : DEMO_SPECIAL_EVENTS,

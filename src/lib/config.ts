@@ -5,7 +5,7 @@ export const DEFAULT_SITE_SETTINGS: SiteSettings = {
   guildName: "Ouroboros",
   presentation:
     "Guilde francophone d’Aion 2 réunissant joueurs débutants comme vétérans. Progresser ensemble, s’entraider et profiter du jeu sans prise de tête.",
-  discordInviteUrl: "https://discord.gg/REPLACE_ME",
+  discordInviteUrl: "https://discord.gg/2tkzumnv3",
   timezone: "Europe/Paris",
   minGs: 1400,
   calendar: {
@@ -73,5 +73,4 @@ export const NAV_LINKS = [
   { href: "/inscription", label: "Inscription" },
   { href: "/evenements", label: "Événements" },
   { href: "/abysses", label: "Abysses" },
-  { href: "/membres", label: "Membres" },
 ] as const;
