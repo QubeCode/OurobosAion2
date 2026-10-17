@@ -6,7 +6,8 @@ Place ici les visuels du site (hero, ornements, etc.).
 - Ne télécharge **pas** d’images depuis le site officiel AION 2.
 - Les chemins attendus pourront être référencés depuis le code, par ex. `/images/hero-bg.webp`.
 
-Fichiers placeholder (remplaçables) :
+Fichiers :
 
-- `hero-placeholder.svg` — fond céleste abstrait
-- `ouroboros-mark.svg` — marque serpent stylisée
+- `aion2-abysses-banner.webp` — bandeau Abysses (landing, faible opacité)
+- `hero-placeholder.svg` — fond céleste abstrait (placeholder)
+- `ouroboros-mark.svg` — marque serpent stylisée (placeholder)

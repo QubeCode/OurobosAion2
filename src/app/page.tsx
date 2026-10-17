@@ -134,13 +134,33 @@ export default function HomePage() {
         </blockquote>
       </section>
 
-      <section className="border-t border-border/40 bg-card/20 py-16">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6">
+      <section
+        aria-label="Timer Abysses"
+        className="relative isolate overflow-hidden border-t border-border/40"
+      >
+        {/* Full-bleed bandeau — local artwork, low opacity */}
+        <div
+          className="pointer-events-none absolute inset-0 -z-10"
+          aria-hidden
+        >
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.28] sm:opacity-[0.32]"
+            style={{
+              backgroundImage: "url(/images/aion2-abysses-banner.webp)",
+              backgroundPosition: "center 35%",
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-night-deep/92 via-night/80 to-night-deep/95" />
+          <div className="absolute inset-0 bg-gradient-to-r from-night-deep/50 via-transparent to-night-deep/50" />
+        </div>
+
+        <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20">
           <AbyssCountdown />
           <div className="mt-8 text-center">
             <Button
               variant="outline"
               nativeButton={false}
+              className="border-cyan-glow/40 bg-night-deep/40 text-cyan-glow backdrop-blur-sm hover:bg-night-deep/60"
               render={<Link href="/abysses" />}
             >
               Voir le timer Abysses
